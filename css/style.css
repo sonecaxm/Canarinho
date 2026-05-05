@@ -451,7 +451,7 @@ nav.scrolled{
   background:radial-gradient(circle at 50% 80%, rgba(255,223,0,.1), transparent 60%);
 }
 .card-img img {
-  max-height:180px; 
+  max-height:200px; 
   max-width:100%;
   object-fit:contain;
   filter:drop-shadow(0 8px 24px rgba(0,0,0,.4));
