@@ -109,11 +109,13 @@ nav.scrolled{
 
 
 /* --- MENU ---*/
-.menu-icon{
+.nav-inner .menu-icon{
+  display: none !important;
   font-size: 24px;
   color: #ffffff;
   cursor: pointer;
   transition: color 0.3s ease;
+  
 }
 
 .menu-icon:hover{
@@ -818,6 +820,7 @@ footer p { font-size:12px; color:rgba(255,255,255,.2);
   .nav-inner{ padding:0 18px; }
   .nav-logo{ font-size:21px; letter-spacing:1px; }
   .nav-links{ display:none; }
+  .nav-inner .menu-icon{ display:block !important; }
 
   .hero{ min-height:720px; }
   .slide{
