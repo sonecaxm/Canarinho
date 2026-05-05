@@ -107,6 +107,87 @@ nav.scrolled{
 }
 .nav-btn:hover { opacity:.85 !important; }
 
+
+/* --- MENU ---*/
+.menu-icon{
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-icon:hover{
+  color: var(--yellow);
+}
+
+/* SIDEBAR */
+
+.sidebar{
+  position: fixed;
+  right:-300px;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(11,21,48,.98) 0%, rgba(6,13,31,.98) 100%);
+  backdrop-filter: blur(20px);
+  z-index: 1001;
+  transition: right 0.3s ease;
+  padding-top: 80px;
+  border-left: 1px solid rgba(255, 223, 0, .22);
+  box-shadow: -24px 0 60px rgba(0, 0, 0, .45);
+}
+
+.sidebar.active{
+  right: 0;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0 16px 8px;
+  padding: 16px 18px;
+  color: rgba(255, 255, 255, .86);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, .07);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .03);
+}
+
+.sidebar a:hover{
+  background: rgba(255, 223, 0, .12);
+  border-color: rgba(255, 223, 0, .34);
+  color: var(--yellow);
+  padding-right: 26px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
+
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+ width: 100%;
+ height: 100%;
+ background:  rgba(0, 0, 0, 0.5);
+ z-index: 999;
+ opacity: 0;
+ visibility: hidden;
+ transition: all 0.3s ease;
+ cursor: pointer;
+}
+
+.overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+
 /* ── HERO CARROSSEL ── */
 .hero {
   height: 100vh; min-height:600px;

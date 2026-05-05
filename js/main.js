@@ -25,6 +25,26 @@
     timer = setInterval(() => goTo(active + 1), 4000);
   }
 
+  /* ICON MENU */
+  function togglesidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+  }
+
+  function closesidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    sidebar.classList.remove( 'active');
+    overlay.classList.remove( 'active');
+  }
+
+
+
+
   prevBtn.addEventListener('click', () => { goTo(active - 1); startTimer(); });
   nextBtn.addEventListener('click', () => { goTo(active + 1); startTimer(); });
   dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); startTimer(); }));
