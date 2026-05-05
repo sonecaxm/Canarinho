@@ -28,6 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+button { font-family: inherit; }
 a { text-decoration:none; color:inherit; }
 img { max-width:100%; height:auto; }
 
@@ -234,7 +235,7 @@ nav.scrolled{
 .slide {
   position:absolute; inset:0;
   display:flex; align-items:center;
-  max-width:1200px; margin:0 auto; padding:0 40px;
+  width:min(100%, 1200px); margin:0 auto; padding:0 40px;
   padding-top:70px;
   opacity:0;
   transition: opacity .7s ease;
@@ -304,6 +305,7 @@ nav.scrolled{
 
 .slide-btns {
   display:flex; gap:12px; flex-wrap:wrap;
+  max-width:100%;
   transform:translateX(-40px); opacity:0;
   transition:transform .6s ease .5s, opacity .6s ease .5s;
 }
@@ -311,21 +313,25 @@ nav.scrolled{
 
 .btn-primary {
   display:inline-flex; align-items:center; gap:8px;
+  justify-content:center;
   background:var(--yellow); color:var(--blue);
   font-size:13px; font-weight:800; letter-spacing:.06em;
   text-transform:uppercase; padding:14px 28px; border-radius:4px;
   border:none; cursor:pointer;
   transition:opacity .2s, transform .2s;
+  min-width:0;
 }
 .btn-primary:hover { opacity:.88; transform:translateY(-2px); }
 
 .btn-secondary {
   display:inline-flex; align-items:center; gap:8px;
+  justify-content:center;
   background:transparent; color:var(--white);
   font-size:13px; font-weight:600; letter-spacing:.06em;
   text-transform:uppercase; padding:14px 24px; border-radius:4px;
   border:1px solid rgba(255,255,255,.2); cursor:pointer;
   transition:border-color .2s, background .2s;
+  min-width:0;
 }
 .btn-secondary:hover { border-color:var(--yellow); background:rgba(255,223,0,.06); }
 
@@ -822,14 +828,14 @@ footer p { font-size:12px; color:rgba(255,255,255,.2);
   .nav-links{ display:none; }
   .nav-inner .menu-icon{ display:block !important; }
 
-  .hero{ min-height:720px; }
+  .hero{ min-height:760px; }
   .slide{
-    min-height:720px;
+    min-height:760px;
     justify-content:flex-start;
-    padding:98px 20px 132px;
+    padding:94px 20px 156px;
     gap:12px;
   }
-  .slide-img img{ max-height:22vh; }
+  .slide-img img{ max-height:20vh; }
   .slide-tag{ font-size:10px; letter-spacing:.14em; }
   .slide-tag::before{ width:18px; }
   .slide-title{ font-size:clamp(36px,14vw,50px); line-height:.92; }
@@ -837,16 +843,18 @@ footer p { font-size:12px; color:rgba(255,255,255,.2);
   .slide-price{ font-size:32px; }
   .slide-btns{
     width:100%;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     gap:8px;
   }
   .btn-primary,
   .btn-secondary{
-    flex:1;
+    flex:1 1 150px;
     min-width:0;
     justify-content:center;
     padding:12px 8px;
     font-size:11px;
+    line-height:1.2;
+    text-align:center;
   }
   .arrow-btn{ width:40px; height:40px; }
   .hero-arrows{ right:20px; bottom:28px; }
@@ -884,7 +892,7 @@ footer p { font-size:12px; color:rgba(255,255,255,.2);
   .newsletter-form button{ width:100%; }
   footer{ padding:30px 20px; }
   .footer-logo img{ height:76px; }
-  .floating-wpp{ width:50px; height:50px; right:16px; bottom:16px; }
+  .floating-wpp{ width:50px; height:50px; right:16px; bottom:76px; }
 }
 
 @media(max-width:380px){
@@ -892,6 +900,12 @@ footer p { font-size:12px; color:rgba(255,255,255,.2);
   .slide-img img{ max-height:20vh; }
   .slide-title{ font-size:38px; }
   .slide-desc{ font-size:12px; }
+  .slide-btns{ flex-direction:column; }
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    flex-basis:auto;
+  }
   .card-price{ font-size:24px; }
 }
 
