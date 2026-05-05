@@ -687,6 +687,52 @@ footer p { font-size:12px; color:rgba(255,255,255,.2);
   .newsletter{ padding:70px 28px; }
   .newsletter-form{ flex-direction:column; }
 }
+
+@media(min-width:601px) and (max-width:720px){
+  .nav-inner{ padding:0 24px; }
+  .nav-logo{ font-size:23px; }
+
+  .hero{
+    height:100svh;
+    min-height:900px;
+  }
+  .slide{
+    min-height:100svh;
+    justify-content:flex-start;
+    gap:22px;
+    padding:124px 32px 170px;
+  }
+  .slide-img img{ max-height:32vh; }
+  .slide-content{ gap:14px; }
+  .slide-title{ font-size:clamp(48px,10vw,62px); line-height:.92; }
+  .slide-desc{ max-width:560px; font-size:14px; line-height:1.55; }
+  .slide-price{ font-size:36px; }
+  .slide-btns{
+    width:100%;
+    justify-content:center;
+    gap:10px;
+  }
+  .btn-primary,
+  .btn-secondary{
+    min-width:190px;
+    justify-content:center;
+    padding:13px 18px;
+  }
+  .hero-indicators{ bottom:104px; }
+  .hero-arrows{ bottom:36px; right:32px; }
+  .slide-counter{ bottom:38px; left:32px; }
+
+  .featured,
+  .categories{ padding:72px 32px; }
+  .products-grid,
+  .cat-grid{ gap:18px; }
+  .card-img,
+  .cat-img{ height:220px; }
+  .card-img img,
+  .cat-img img{ max-height:165px; }
+  .banner{ padding:72px 32px; }
+}
+
 @media(max-width:600px){
   .nav-inner{ padding:0 18px; }
   .nav-logo{ font-size:21px; letter-spacing:1px; }
